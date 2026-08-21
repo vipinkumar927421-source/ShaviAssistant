@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Shavi</string>
+    <string name="settings_title">Settings</string>
+    <string name="say_hey_shavi">Say \"Hey Shavi\" to start…</string>
+    <string name="mic_button_description">Manual microphone button</string>
+    <string name="made_by_vipin">Made by Vipin</string>
+
+    <string name="status_idle">Idle</string>
+    <string name="status_waiting_wake_word">Listening for \"Hey Shavi\"…</string>
+    <string name="status_listening">Listening…</string>
+    <string name="status_thinking">Thinking…</string>
+    <string name="status_speaking">Speaking…</string>
+
+    <string name="mic_permission_required">Microphone permission is required for Shavi to listen.</string>
+    <string name="please_add_api_key">Please add your Gemini API key in Settings to get started.</string>
+
+    <string name="gemini_api_key">Gemini API Key</string>
+    <string name="enter_gemini_api_key">Enter your Gemini API key</string>
+    <string name="key_saved">Key saved securely ✓</string>
+    <string name="no_key_saved">No key saved yet</string>
+    <string name="key_cannot_be_empty">API key cannot be empty</string>
+    <string name="save">Save</string>
+    <string name="clear">Clear</string>
+
+    <string name="voice_settings">Voice Settings</string>
+    <string name="pitch">Pitch</string>
+    <string name="speed">Speed</string>
+    <string name="volume">Volume</string>
+
+    <string name="accessibility_service_description">Allows Shavi to perform on-screen actions you explicitly request, such as tapping a button inside another app.</string>
+</resources>

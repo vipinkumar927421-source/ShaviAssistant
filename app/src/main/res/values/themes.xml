@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.Shavi" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#FF6FA8DC</item>
+        <item name="colorPrimaryDark">#FF3D6BAA</item>
+        <item name="colorAccent">#FFFFC0CB</item>
+    </style>
+</resources>
