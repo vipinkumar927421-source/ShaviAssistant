@@ -65,7 +65,6 @@ class SpeechRecognitionManager(
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
             putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
             // Allow Hindi as a secondary preferred language for Hinglish support
-            putExtra(RecognizerIntent.EXTRA_PREFERRED_LANGUAGE, "hi-IN")
             putExtra(RecognizerIntent.EXTRA_PARTIAL_RESULTS, false)
         }
         recognizer?.startListening(intent)
