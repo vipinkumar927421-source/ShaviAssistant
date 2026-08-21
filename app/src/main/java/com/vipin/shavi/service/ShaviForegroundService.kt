@@ -3,16 +3,13 @@ package com.vipin.shavi.service
 import android.app.Notification
 import android.app.Service
 import android.content.Intent
+import android.content.pm.ServiceInfo
+import android.os.Build
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import com.vipin.shavi.ShaviApplication
 import com.vipin.shavi.R
 
-/**
- * Keeps the mic session alive as a foreground service (required on Android 12+
- * for any background microphone use) and shows a persistent, honest
- * notification so the user always knows Shavi is listening.
- */
 class ShaviForegroundService : Service() {
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -23,7 +20,11 @@ class ShaviForegroundService : Service() {
             .setOngoing(true)
             .build()
 
-        startForeground(NOTIFICATION_ID, notification)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
+            startForeground(NOTIFICATION_ID, notification, ServiceInfo.FOREGROUND_SERVICE_TYPE_MICROPHONE)
+        } else {
+            startForeground(NOTIFICATION_ID, notification)
+        }
         return START_STICKY
     }
 
