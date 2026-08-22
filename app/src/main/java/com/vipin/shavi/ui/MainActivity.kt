@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         ttsManager = TextToSpeechManager(
             context = this,
             onSpeakingStarted = { setState(ShaviListenState.SPEAKING) },
-            onSpeakingFinished = { setState(ShaviListenState.LISTENING_FOR_WAKE_WORD) }
+            onSpeakingFinished = { speechManager.resumeAfterSpeaking() }
         )
 
         speechManager = SpeechRecognitionManager(
@@ -116,6 +116,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleCommand(command: String) {
+        if (command == "__EXIT__") {
+            val bye = "Theek hai, bye!"
+            binding.responseText.text = bye
+            ttsManager.speak(bye, isHindi = true)
+            return
+        }
         binding.conversationText.text = command
 
         // Phone-control intents are matched locally first (fast + reliable);
