@@ -29,7 +29,7 @@ class GeminiClient(
         .readTimeout(30, TimeUnit.SECONDS)
         .build()
 
-    private val model = "gemini-2.5-flash"
+    private val model = "gemini-3.6-flash"
 
     private val systemPrompt = """
         You are Shavi, a cute, soft-spoken, friendly and intelligent personal AI assistant
