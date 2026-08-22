@@ -26,7 +26,7 @@ class SpeechRecognitionManager(
 
     private enum class Mode { WAKE_WORD, COMMAND }
 
-    private val wakePhrases = listOf("hey shavi", "hey shabi", "हे शावी", "शावी")
+    private val wakePhrases = listOf("shavi", "savi", "shabi", "sabi", "शावी", "सावी", "शबी")
 
     fun start() {
         if (running) return
